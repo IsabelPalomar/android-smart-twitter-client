@@ -10,4 +10,8 @@
     <color name="colorPrimaryDark.NightMode">#212121</color>
     <color name="colorAccent.NightMode">#03A9F4</color>
 
+    <!-- General colors -->
+    <color name="colorWhite">#FFFFFF</color>
+
+
 </resources>

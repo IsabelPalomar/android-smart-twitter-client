@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Cliente Inteligente Twitter</string>
+    <string name="login_welcome_to_twitter">Bienvenido a Twitter</string>
+    <string name="login_whats_happening">Ve lo que está pasando en el mundo en este momento</string>
+    <string name="login_label">Iniciar Sesion</string>
+</resources>
