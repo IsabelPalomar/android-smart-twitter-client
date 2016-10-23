@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <!-- Base theme colors -->
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#03A9F4</color>
+
+    <!-- Night mode theme colors -->
+    <color name="colorPrimary.NightMode">#212121</color>
+    <color name="colorPrimaryDark.NightMode">#212121</color>
+    <color name="colorAccent.NightMode">#03A9F4</color>
+
 </resources>
