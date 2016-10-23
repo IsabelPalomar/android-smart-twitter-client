@@ -5,6 +5,12 @@
 
     <dimen name="activity_vertical_big_margin">50dp</dimen>
 
+    <dimen name="activity_horizontal_padding">16dp</dimen>
+    <dimen name="activity_vertical_padding">16dp</dimen>
+    <dimen name="activity_nav_header">150dp</dimen>
+
+    <dimen name="fab_margin">16dp</dimen>
+
     <!-- Font Sizes -->
     <dimen name="textAppearanceXLarge">35sp</dimen>
 

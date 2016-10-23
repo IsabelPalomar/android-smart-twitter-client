@@ -3,4 +3,13 @@
     <string name="login_welcome_to_twitter">Welcome to Twitter</string>
     <string name="login_whats_happening">See what\'s happening in the world right now</string>
     <string name="login_label">Login</string>
+    <string name="title_activity_timeline">Home</string>
+
+    <string name="nav_profile">Profile</string>
+    <string name="nav_nightMode">Night Mode</string>
+    <string name="nav_logout">Logout</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
 </resources>
