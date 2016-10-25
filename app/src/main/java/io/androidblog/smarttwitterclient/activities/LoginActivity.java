@@ -1,4 +1,4 @@
-package io.androidblog.smarttwitterclient;
+package io.androidblog.smarttwitterclient.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.androidblog.smarttwitterclient.R;
 
 public class LoginActivity extends AppCompatActivity {
 

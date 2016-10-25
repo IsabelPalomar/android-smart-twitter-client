@@ -1,9 +1,11 @@
-package io.androidblog.smarttwitterclient;
+package io.androidblog.smarttwitterclient.activities;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +16,10 @@ import android.view.View;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.androidblog.smarttwitterclient.R;
+import io.androidblog.smarttwitterclient.adapters.TimelinePagerAdapter;
+import io.androidblog.smarttwitterclient.fragments.MentionsTimelineFragment;
+import io.androidblog.smarttwitterclient.fragments.UserTimelineFragment;
 
 public class TimelineActivity extends AppCompatActivity {
 
@@ -22,6 +28,10 @@ public class TimelineActivity extends AppCompatActivity {
     DrawerLayout ndTweets;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+    @BindView(R.id.vpPagerTimeline)
+    ViewPager vpPagerTimeline;
+    @BindView(R.id.tlTwitter)
+    TabLayout tlTwitter;
 
 
     @Override
@@ -33,6 +43,9 @@ public class TimelineActivity extends AppCompatActivity {
 
         drawerToggle = setupDrawerToggle();
         ndTweets.addDrawerListener(drawerToggle);
+
+        setupViewPager(vpPagerTimeline);
+        tlTwitter.setupWithViewPager(vpPagerTimeline);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -70,6 +83,13 @@ public class TimelineActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void setupViewPager(ViewPager vpPagerTimeline) {
+        TimelinePagerAdapter adapter = new TimelinePagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new UserTimelineFragment(), "Timeline");
+        adapter.addFragment(new MentionsTimelineFragment(), "Mentions");
+        vpPagerTimeline.setAdapter(adapter);
     }
 
     @OnClick(R.id.ndTweets)

@@ -1,17 +1,26 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_xxs_horizontal_margin">4dp</dimen>
+    <dimen name="activity_xs_horizontal_padding">8dp</dimen>
+    <dimen name="activity_xs_horizontal_margin">8dp</dimen>
+
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_padding">16dp</dimen>
+    <dimen name="activity_vertical_padding">16dp</dimen>
 
     <dimen name="activity_vertical_big_margin">50dp</dimen>
 
-    <dimen name="activity_horizontal_padding">16dp</dimen>
-    <dimen name="activity_vertical_padding">16dp</dimen>
-    <dimen name="activity_nav_header">150dp</dimen>
-
+    <!-- Elements dimensions -->
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="separator_line_size">1dp</dimen>
+    <dimen name="activity_nav_header">150dp</dimen>
+    <dimen name="activity_timeline_profile_img">65dp</dimen>
+    <dimen name="activity_timeline_btn_actions">0dp</dimen>
 
     <!-- Font Sizes -->
+    <dimen name="textAppearanceXSmall">6sp</dimen>
+    <dimen name="textAppearanceBig">16sp</dimen>
     <dimen name="textAppearanceXLarge">35sp</dimen>
 
 </resources>

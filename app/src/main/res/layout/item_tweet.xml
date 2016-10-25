@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appCompat="http://schemas.android.com/tools"
+    android:id="@+id/rlTweet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_xs_horizontal_padding">
+
+    <ImageView
+        android:id="@+id/ivUserImg"
+        android:layout_width="@dimen/activity_timeline_profile_img"
+        android:layout_height="@dimen/activity_timeline_profile_img"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:textColor="@android:color/background_dark"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/ivUserImg"
+        android:layout_toRightOf="@+id/ivUserImg"
+        android:textSize="@dimen/textAppearanceBig"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginLeft="@dimen/activity_xs_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_xs_horizontal_margin"
+        appCompat:text="Javier P"
+        />
+
+    <TextView
+        android:id="@+id/tvUserId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvUserName"
+        android:layout_toEndOf="@+id/tvUserName"
+        android:layout_toRightOf="@+id/tvUserName"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginLeft="@dimen/activity_xxs_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_xxs_horizontal_margin"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="-6dp"
+        appCompat:text="\@the_s41nt" />
+
+    <TextView
+        android:id="@+id/tvCreatedAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tvUserId"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginLeft="@dimen/activity_xs_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_xs_horizontal_margin"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        appCompat:text="1d" />
+
+    <TextView
+        android:id="@+id/tvBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUserName"
+        android:layout_toEndOf="@+id/ivUserImg"
+        android:layout_toRightOf="@+id/ivUserImg"
+        android:layout_marginLeft="@dimen/activity_xs_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_xs_horizontal_margin"
+        android:textSize="@dimen/textAppearanceBig"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@android:color/background_dark"
+        android:autoLink="all"
+        android:linksClickable="true"
+        appCompat:text="I don't stop when I'm tired. I stop when I'm done." />
+
+    <ImageView
+        android:id="@+id/ivTweetImg"
+        android:layout_marginLeft="@dimen/activity_xs_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_xs_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBody" />
+
+    <LinearLayout
+        android:id="@+id/llIcons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvBody"
+        android:layout_marginLeft="@dimen/activity_xs_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_xs_horizontal_margin"
+        android:layout_alignStart="@+id/tvBody"
+        android:layout_below="@+id/ivTweetImg"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnReply"
+            android:background="@android:color/transparent"
+            style="?android:attr/buttonStyleSmall"
+            android:stateListAnimator="@null"
+            android:layout_width="@dimen/activity_timeline_btn_actions"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_reply"
+            android:textSize="@dimen/textAppearanceXSmall"
+            android:gravity="start|center_vertical" />
+
+        <Button
+            android:id="@+id/btnRetweet"
+            android:background="@android:color/transparent"
+            style="?android:attr/buttonStyleSmall"
+            android:stateListAnimator="@null"
+            android:layout_width="@dimen/activity_timeline_btn_actions"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_retweet"
+            android:drawableStart="@drawable/ic_retweet"
+            android:textSize="@dimen/textAppearanceXSmall"
+            android:gravity="start|center_vertical" />
+
+        <Button
+            android:id="@+id/btnLike"
+            android:background="@android:color/transparent"
+            style="?android:attr/buttonStyleSmall"
+            android:stateListAnimator="@null"
+            android:layout_width="@dimen/activity_timeline_btn_actions"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_like"
+            android:drawableStart="@drawable/ic_like"
+            android:textSize="@dimen/textAppearanceXSmall"
+            android:gravity="start|center_vertical" />
+
+        <Button
+            android:id="@+id/btnDM"
+            android:background="@android:color/transparent"
+            style="?android:attr/buttonStyleSmall"
+            android:stateListAnimator="@null"
+            android:layout_width="@dimen/activity_timeline_btn_actions"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_dm"
+            android:drawableStart="@drawable/ic_dm"
+            android:textSize="@dimen/textAppearanceXSmall"
+            android:gravity="start|center_vertical" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_below="@+id/llIcons"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/separator_line_size"
+        android:background="@android:color/darker_gray"/>
+</RelativeLayout>
