@@ -1,6 +1,8 @@
 package io.androidblog.smarttwitterclient.models;
 
-public class Tweet {
+import java.io.Serializable;
+
+public class Tweet implements Serializable{
 
     private long uid;
     private String body;

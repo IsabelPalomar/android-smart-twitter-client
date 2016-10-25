@@ -2,6 +2,7 @@ package io.androidblog.smarttwitterclient.adapters;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.androidblog.smarttwitterclient.R;
+import io.androidblog.smarttwitterclient.activities.TweetDetailActivity;
 import io.androidblog.smarttwitterclient.models.Tweet;
 
 public class TweetsRecyclerViewAdapter extends RecyclerView.Adapter<TweetsRecyclerViewAdapter.ViewHolder> {
@@ -62,7 +64,7 @@ public class TweetsRecyclerViewAdapter extends RecyclerView.Adapter<TweetsRecycl
         return tweets.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener  {
 
         @BindView(R.id.ivUserImg)
         ImageView ivUserImg;
@@ -80,6 +82,15 @@ public class TweetsRecyclerViewAdapter extends RecyclerView.Adapter<TweetsRecycl
         public ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            Tweet tweet = tweets.get(getAdapterPosition());
+            Intent i = new Intent(getContext(), TweetDetailActivity.class);
+            i.putExtra("Tweet", tweet);
+            getContext().startActivity(i);
         }
     }
 }

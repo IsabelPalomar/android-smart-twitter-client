@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.androidblog.smarttwitterclient">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -22,7 +22,14 @@
         <activity
             android:name=".activities.TimelineActivity"
             android:label="@string/title_activity_timeline"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.TweetDetailActivity"
+            android:label="@string/title_activity_tweet_detail"
+            android:parentActivityName=".activities.TimelineActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.TimelineActivity" />
+        </activity>
     </application>
 
 </manifest>
