@@ -14,5 +14,7 @@
     <string name="drawer_close">Close navigation drawer</string>
     <string name="create_tweet_whats_happening">What\'s happening?</string>
     <string name="create_tweet_btn_label">Tweet</string>
+    <string name="title_activity_user_profile">UserProfileActivity</string>
+    <string name="action_settings">Settings</string>
 
 </resources>

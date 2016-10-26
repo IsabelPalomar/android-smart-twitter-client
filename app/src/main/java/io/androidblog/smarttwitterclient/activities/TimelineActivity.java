@@ -1,8 +1,10 @@
 package io.androidblog.smarttwitterclient.activities;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
@@ -35,6 +37,8 @@ public class TimelineActivity extends AppCompatActivity {
     TabLayout tlTwitter;
     @BindView(R.id.fab)
     FloatingActionButton fab;
+    @BindView(R.id.nvViewTweets)
+    NavigationView nvViewTweets;
 
 
     @Override
@@ -49,6 +53,8 @@ public class TimelineActivity extends AppCompatActivity {
 
         setupViewPager(vpPagerTimeline);
         tlTwitter.setupWithViewPager(vpPagerTimeline);
+
+        setupDrawerContent(nvViewTweets);
 
     }
 
@@ -85,6 +91,30 @@ public class TimelineActivity extends AppCompatActivity {
         adapter.addFragment(new UserTimelineFragment(), "Timeline");
         adapter.addFragment(new MentionsTimelineFragment(), "Mentions");
         vpPagerTimeline.setAdapter(adapter);
+    }
+
+    private void setupDrawerContent(NavigationView nvViewTweets) {
+        nvViewTweets.setNavigationItemSelectedListener(
+                new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(MenuItem menuItem) {
+                        selectDrawerItem(menuItem);
+                        return true;
+                    }
+                });
+    }
+
+    private void selectDrawerItem(MenuItem menuItem) {
+
+        switch(menuItem.getItemId()) {
+            case R.id.navProfile:
+                Intent i = new Intent(this, UserProfileActivity.class);
+                startActivity(i);
+                break;
+        }
+
+        menuItem.setChecked(true);
+        ndTweets.closeDrawers();
     }
 
     @OnClick(R.id.fab)

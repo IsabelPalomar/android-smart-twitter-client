@@ -18,10 +18,14 @@
     <dimen name="activity_timeline_profile_img">65dp</dimen>
     <dimen name="activity_timeline_profile_img_small">50dp</dimen>
     <dimen name="activity_timeline_btn_actions">0dp</dimen>
+    <dimen name="activity_profile_details">190dp</dimen>
+    <dimen name="app_bar_height">140dp</dimen>
 
     <!-- Font Sizes -->
     <dimen name="textAppearanceXSmall">6sp</dimen>
+    <dimen name="textAppearanceSmallVariant">13sp</dimen>
     <dimen name="textAppearanceBig">16sp</dimen>
     <dimen name="textAppearanceXLarge">35sp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 
 </resources>
