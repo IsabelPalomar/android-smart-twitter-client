@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appCompat="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnClose"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ic_close"
+        android:drawableStart="@drawable/ic_close"
+        android:onClick="closeDialog"
+        android:stateListAnimator="@null"
+        android:textColor="@color/colorAccent" />
+
+    <ImageButton
+        android:id="@+id/ibProfile"
+        android:layout_width="@dimen/activity_timeline_profile_img_small"
+        android:layout_height="@dimen/activity_timeline_profile_img_small"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/activity_xs_horizontal_padding"
+        android:src="@drawable/isabelpalomar" />
+
+    <EditText
+        android:id="@+id/etTweet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnClose"
+        android:ems="10"
+        android:fontFamily="sans-serif-light"
+        android:gravity="top|start"
+        android:hint="@string/create_tweet_whats_happening"
+        android:inputType="textMultiLine"
+        android:padding="@dimen/activity_xs_horizontal_margin"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="@dimen/activity_xs_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_xs_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnLocation"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_map"
+            android:drawableStart="@drawable/ic_map"
+            android:gravity="start|center_vertical"
+            android:stateListAnimator="@null"
+            android:textSize="@dimen/textAppearanceXSmall" />
+
+        <Button
+            android:id="@+id/btnPicture"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_camera"
+            android:drawableStart="@drawable/ic_camera"
+            android:gravity="start|center_vertical"
+            android:stateListAnimator="@null"
+            android:textSize="@dimen/textAppearanceXSmall" />
+
+        <Button
+            android:id="@+id/btnGIF"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_gif"
+            android:drawableStart="@drawable/ic_gif"
+            android:gravity="start|center_vertical"
+            android:stateListAnimator="@null"
+            android:textSize="@dimen/textAppearanceXSmall" />
+
+        <Button
+            android:id="@+id/btnPoll"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_poll"
+            android:drawableStart="@drawable/ic_poll"
+            android:gravity="center_vertical"
+            android:stateListAnimator="@null"
+            android:textSize="@dimen/textAppearanceXSmall" />
+
+        <TextView
+            android:id="@+id/tvChars"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/darker_gray"
+            appCompat:text="140" />
+
+        <Button
+            android:id="@+id/btnPostTweet"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/activity_xs_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_xs_horizontal_margin"
+            android:layout_weight="2"
+            android:background="@color/colorAccent"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:text="Tweet" />
+    </LinearLayout>
+
+</RelativeLayout>
